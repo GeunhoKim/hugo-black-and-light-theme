@@ -204,8 +204,9 @@
   ul li {
     list-style-type: none;
   }
+
   ul li:before {
-    content:"\00BB \0020";
+    content:"\2022 \0020";
   }
 
   #nav ul li:before, .posts_listing li:before {
@@ -294,6 +295,35 @@
     padding-top: 225px;
   }
 
+  img.avatar {
+    border-radius: 50%;
+    width: 300px;
+  }
+
+  /* SOCIAL */
+  .social_id {
+    color:#9b9b9b; 
+    font-size:10px;
+    text-align:center;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center;
+  }
+  .social-icons__icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .social-icons__icon--linkedin {
+    background-image: url(/icons/linkedin.svg);
+    margin-right: 2rem;
+  }
+  .social-icons__icon--github {
+    background-image: url(/icons/github.svg);
+  }
+
   @media (max-width: 750px) {
     body {
       padding-left:20px;
@@ -359,6 +389,11 @@
 
     .posts_listing li div{
       font-size:12px;
+    }
+
+    img.avatar {
+      border-radius: 50%;
+      width: 170px;
     }
   }
 </style>

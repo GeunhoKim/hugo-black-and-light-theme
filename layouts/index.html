@@ -1,17 +1,20 @@
 {{ partial "header.html" . }}
 
-<section id=content>
-  <ul class=posts_listing>
-    {{ range .Pages }}
-      <li>
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        <div id=date>
-          <time>{{ .Date.Format (.Site.Params.dateform | default "January 2006") }}</time>
-        </div>
-      </li>
-    {{ end }}
+<section id="content">  
+  <h1>I'm a Developer.</h1>
+  <ul>
+    <li>
+      <a href="https://www.linkedin.com/company/ebay-korea/about/">eBay Korea
+      </a> : Dec. 2013-
+    </li>
   </ul>
+   
+  <img src="{{ .Site.Params.avatar }}" class="avatar"></img>
+  <div class="social_id">    
+    <div class="social-icons">
+      <a class="social-icons__icon social-icons__icon--linkedin" href="https://www.linkedin.com/in/{{ .Site.Params.socialId }}"></a>
+      <a class="social-icons__icon social-icons__icon--github" href="https://github.com/{{ .Site.Params.socialId }}"></a>
+    </div>
+    @{{ .Site.Params.socialId }}
+  </div>
 </section>
-
-{{ partial "footer.html" . }}
-
