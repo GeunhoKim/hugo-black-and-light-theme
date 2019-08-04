@@ -5,13 +5,21 @@
 
   {{ if .Params.date }}
     <div id=sub-header>
-      {{ .Date.Format (.Site.Params.dateform | default "2006-01-02") }} · {{ .ReadingTime }} minute read
+      {{ .Date.Format (.Site.Params.dateform | default "2 January 2006") }} · {{ .ReadingTime }} minute{{ if (gt .ReadingTime 1) }}s{{ end }} read
     </div>
   {{ end }}
+
+  {{ .TableOfContents }}
 
   <div class="entry-content">
     {{ .Content }}
   </div>
+
+  {{ if .Params.lastmod }}
+    <div id=sub-header>
+      Updated {{ .Lastmod.Format (.Site.Params.dateform | default "2 January 2006") }}
+    </div>
+  {{ end }}
 
   <div id=links>
     {{ if .PrevInSection }}
