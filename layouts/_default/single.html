@@ -1,10 +1,10 @@
 {{ partial "header.html" . }}
 
-<section id=content>
+<section id="content">
   <h1>{{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}</h1>
 
   {{ if .Params.date }}
-    <div id=sub-header>
+    <div id="sub-header">
       {{ .Date.Format (.Site.Params.dateform | default "2 January 2006") }} · {{ .ReadingTime }} minute{{ if (gt .ReadingTime 1) }}s{{ end }} read
     </div>
   {{ end }}
@@ -16,12 +16,12 @@
   </div>
 
   {{ if .Params.lastmod }}
-    <div id=sub-header>
+    <div id="sub-header">
       Updated {{ .Lastmod.Format (.Site.Params.dateform | default "2 January 2006") }}
     </div>
   {{ end }}
 
-  <div id=links>
+  <div id="links">
     {{ if .PrevInSection }}
       <a class="basic-alignment left" href="{{.PrevInSection.Permalink}}">&laquo; {{.PrevInSection.Title}}</a>
     {{ end }}
