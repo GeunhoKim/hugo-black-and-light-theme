@@ -19,6 +19,10 @@
     margin:auto;
   }
 
+  .footnotes {
+    margin: 30px 0 40px 0;
+  }
+
   footer {
     font-size: x-small;
     letter-spacing: 0.5px;
@@ -34,7 +38,7 @@
 
   img {
     margin: 10px auto 10px auto;
-    max-width: 65%;
+    max-width: 75%;
     display: block;
   }
 
@@ -288,18 +292,6 @@
     float:right;
   }
 
-  #not-found {
-    text-align: center;
-  }
-
-  #not-found a {
-    font-family:"Old Standard TT",serif;
-    font-size: 200px;
-    text-decoration: none;
-    display: inline-block;
-    padding-top: 225px;
-  }
-
   img.avatar {
     border-radius: 50%;
     width: 300px;
@@ -334,6 +326,18 @@
     background-image: url(/icons/gmail.svg);
   }
 
+  #not-found {
+    display: flex;
+  }
+  .not-found__icon--docker {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-right: 0.5em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(/icons/docker.svg);
+  }
+
   nav#TableOfContents {
     margin: 20px 0 50px 0;
   }
@@ -345,7 +349,7 @@
     }
 
     img {
-      max-width: 75%;
+      max-width: 80%;
     }
 
     #nav h1 a {
