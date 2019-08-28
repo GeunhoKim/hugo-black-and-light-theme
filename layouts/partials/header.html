@@ -41,6 +41,7 @@
         {{ range .Site.Menus.main }}
           <li><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
+        <a class="rss-icon" href="/index.xml"></a>
       </ul>
     </section>
 {{ template "_internal/google_analytics_async.html" . }}
